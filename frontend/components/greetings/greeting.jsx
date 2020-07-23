@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Greetings extends React.Component {
     constructor(props) {
@@ -13,17 +14,21 @@ class Greetings extends React.Component {
 
     render() {
         if (this.props.currentUser === undefined) {
-            return  <div className="signup-logout">
-                        <a href="/signup">Signup</a>
-                        <br/>
-                        <a href="/login">Log In</a>
-                    </div>
+            return  (
+                <div className="signup-logout">
+                    <Link to="/signup">Sign Up</Link>
+                    <br/>
+                    <Link to="/login">Log In</Link>
+                </div>
+            )
         } else {
-            return  <div>
-                        <span>Welcome {this.props.currentUser.username}</span>
-                        <br/>
-                        <button onClick={this.handleSubmit}>Log out</button>
-                    </div>
+            return  (
+                <div>
+                    <span>Welcome {this.props.currentUser.username}</span>
+                    <br/>
+                    <button onClick={this.handleSubmit}>Log out</button>
+                </div>
+            )
         }
      
     }

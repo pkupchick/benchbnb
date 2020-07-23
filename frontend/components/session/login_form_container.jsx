@@ -3,7 +3,7 @@ import { makeNewUser, signin } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const msp = (state) => ({
-    errors: this.state.errors,
+    errors: state.errors,
     formType: 'login'
 })
 

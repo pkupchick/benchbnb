@@ -1,9 +1,9 @@
 import React from "react";
 import GreetingContainer from './greetings/greeting_container';
 import { Route } from 'react-router-dom';
-import { LoginFormContainer } from './session/login_form_container';
-import { SignupFormContainer } from './session/signup_form_container';
-import SessionForm from './session/session_form';
+import LoginFormContainer from './session/login_form_container';
+import SignupFormContainer from './session/signup_form_container';
+// import SessionForm from './session/session_form';
 
 const App = () => (
   <div>
@@ -11,7 +11,8 @@ const App = () => (
       <h1>Bench BnB</h1>
       <GreetingContainer />
     </header>
-    <SessionForm />
+    <Route path="/login" component={LoginFormContainer} />
+    <Route path="/signup" component={SignupFormContainer} />
   </div>
 );
 
