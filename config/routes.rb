@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :users do
       resources :listings, only: [:index]
     end
+
+    resources :benches
     
     resource :session, only: [:create, :destroy]
   end

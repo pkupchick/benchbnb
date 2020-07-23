@@ -7,8 +7,9 @@ const mapStateToProps = (state) => ({
     currentUser: state.entities.users[state.session.id]
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => {
+    return {
     signout: () => dispatch(signout())
-});
+}};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Greeting);
