@@ -1,4 +1,5 @@
 import React from 'react';
+import { updateMarkers } from '../util/marker_manager';
 
 class BenchIndex extends React.Component {
     constructor(props) {

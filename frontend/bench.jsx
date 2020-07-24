@@ -3,7 +3,7 @@ import React from 'react';
 import configureStore from "./store/store";
 import Root from "./components/root";
 import {signin} from './actions/session_actions';
-import { fetchBenches } from './util/bench_api_util';
+import { fetchBenches } from './actions/bench_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             session: { id: window.currentUser.id }
         };
         store = configureStore(preloadedState);
+        debugger;
         // delete window.currentUser;
     } else {
         store = configureStore();
