@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
     return {
-    benches: Object.values(state.entities.benches)
+    benches: state.entities.benches
     }
 };
 

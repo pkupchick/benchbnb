@@ -1,17 +1,22 @@
 import React from 'react';
 
 class BenchIndex extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    
     componentDidMount() {
         this.props.fetchBenches();
     }
 
     render() {
-        const benches = this.props.benches.map((bench, idx) => {
+        const benches = Object.values(this.props.benches) || [];
+        const benchesLi = benches.map((bench, idx) => {
             return <li key={idx}>{bench.description}</li>;
         });
         return (
             <ul>
-                {benches}
+                {benchesLi}
             </ul>
         )
     }
