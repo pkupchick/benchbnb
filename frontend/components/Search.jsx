@@ -8,7 +8,9 @@ const Search = ({ benches, fetchBenches }) => {
             <BenchIndex 
                 benches = {benches}
                 fetchBenches = {fetchBenches} />
-            <BenchMap />
+            <BenchMap
+                benches={benches}
+                fetchBenches={fetchBenches} />
         </div>
     );
 }

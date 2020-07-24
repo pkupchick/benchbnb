@@ -1,3 +1,5 @@
+
+
 export default class MarkerManager {
     constructor(map) {
         this.map = map;
@@ -5,6 +7,16 @@ export default class MarkerManager {
     }
     
     updateMarkers(benches) {
-        console.log("time to update");
+        const benchArray = Object.values(benches);
+        benchArray.forEach(bench => {
+            if (!this.markers[bench.id]) {
+                this.markers[bench.id] = new google.maps.Marker({
+                    position: { lat: bench.lat, lng: bench.lng },
+                    map: this.map,
+                    id: bench.id
+                })
+            }
+        })
     }
+
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import MarkerManager from '../util/marker_manager';
-import { updateMarkers } from '../util/marker_manager';
 
 class BenchMap extends React.Component {
     constructor(props) {
